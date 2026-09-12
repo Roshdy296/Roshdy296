@@ -52,6 +52,25 @@
             margin-bottom: 15px;
         }
 
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .contact-links a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-links a:hover {
+            color: #7dd3fc;
+            text-decoration: underline;
+        }
+
         .tags {
             display: flex;
             gap: 10px;
@@ -187,6 +206,14 @@
     <header>
         <h1>Mohamed Rashidi</h1>
         <p class="subtitle">Data Analyst & Automation Engineer | Specializing in Python ETL, Machine Learning, Automated n8n Pipelines, and Interactive BI Dashboards.</p>
+        
+        <div class="contact-links">
+            <a href="mailto:roshdi296@gmail.com">📧 roshdi296@gmail.com</a>
+            <a href="tel:+2001090814643">📱 +20 010 9081 4643</a>
+            <a href="https://www.linkedin.com/in/mohamed-rashidi-56a995246" target="_blank">💼 LinkedIn Profile</a>
+            <a href="https://github.com/Roshdy296" target="_blank">🐙 GitHub: Roshdy296</a>
+        </div>
+
         <div class="tags">
             <span class="tag">Python (Pandas, XGBoost)</span>
             <span class="tag">SQL</span>
