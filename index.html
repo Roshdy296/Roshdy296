@@ -3,278 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Rashidi | Data Analyst Portfolio</title>
+    <title>Mohamed Rashidi | Data & Automation Portfolio</title>
     <style>
         :root {
-            --bg: #0f172a;
-            --card: #1e293b;
-            --accent: #38bdf8;
-            --text: #f8fafc;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --border: #334155;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-purple: #c084fc;
+            --accent-yellow: #fde047;
+            --border-color: #334155;
+            --code-bg: #0b1329;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: var(--bg);
-            color: var(--text);
+            background-color: var(--bg-color);
+            color: var(--text-main);
             line-height: 1.6;
-            padding: 2rem 1rem;
-        }
-
-        .container {
-            max-width: 900px;
+            padding: 20px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         header {
-            margin-bottom: 3rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 2rem;
+            padding: 40px 0 20px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
         }
 
         h1 {
             font-size: 2.5rem;
-            color: var(--text);
-            margin-bottom: 0.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 10px;
         }
 
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
-        .contact-info {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .contact-info a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        section {
-            margin-bottom: 3rem;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-            border-left: 4px solid var(--accent);
-            padding-left: 0.75rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.25rem;
-        }
-
-        .card h3 {
-            margin-bottom: 0.5rem;
+        p.subtitle {
             font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
         }
 
-        .tag-container {
+        .tags {
             display: flex;
+            gap: 10px;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.75rem;
         }
 
         .tag {
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--accent);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
+            background-color: var(--border-color);
+            color: var(--accent-blue);
+            padding: 4px 12px;
+            border-radius: 15px;
             font-size: 0.85rem;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            font-weight: 600;
         }
 
-        .timeline-item {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.25rem;
-            margin-bottom: 1rem;
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
         }
 
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            margin-bottom: 0.5rem;
+        .project-title {
+            font-size: 1.8rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
         }
 
-        .job-title {
+        .tool-badge {
+            display: inline-block;
+            background-color: #0284c7;
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
             font-weight: bold;
-            color: var(--text);
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
-        .company {
-            color: var(--accent);
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
         }
 
-        .date {
+        .kpi-card {
+            background-color: var(--bg-color);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .kpi-value {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--accent-green);
+        }
+
+        .kpi-label {
+            font-size: 0.85rem;
             color: var(--text-muted);
-            font-size: 0.875rem;
         }
 
-        ul {
-            list-style-position: inside;
-            color: var(--text-muted);
+        pre {
+            background: var(--code-bg);
+            color: var(--accent-blue);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.85rem;
+            margin: 15px 0;
+            border: 1px solid var(--border-color);
         }
 
-        li {
-            margin-bottom: 0.4rem;
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: #0f172a;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-right: 10px;
+            transition: background 0.2s;
         }
 
-        footer {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            border-top: 1px solid var(--border);
-            padding-top: 2rem;
+        .btn:hover {
+            background-color: #7dd3fc;
+        }
+
+        .section-header {
+            font-weight: bold;
+            color: var(--accent-blue);
+            margin-top: 20px;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
     <header>
-        <h1>Mohamed Ahmed Rashidi</h1>
-        <div class="subtitle">Data Analyst & Operations Specialist</div>
-        <div class="contact-info">
-            <span>📍 Alexandria, Egypt</span>
-            <span>📞 01090814643</span>
-            <span>✉️ <a href="mailto:roshdi296@gmail.com">roshdi296@gmail.com</a></span>
+        <h1>Mohamed Rashidi</h1>
+        <p class="subtitle">Data Analyst & Automation Engineer | Specializing in Python ETL, Machine Learning, Automated n8n Pipelines, and Interactive BI Dashboards.</p>
+        <div class="tags">
+            <span class="tag">Python (Pandas, XGBoost)</span>
+            <span class="tag">SQL</span>
+            <span class="tag">n8n Automation</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">OpenAI Whisper</span>
+            <span class="tag">Google Sheets API</span>
         </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p style="color: var(--text-muted);">
-            Data Analyst with a solid background in accounting and retail operations leadership. Experienced in transforming raw datasets into actionable business intelligence using Python, SQL Server, Power BI, and Microsoft Excel. Skilled in designing interactive dashboards, maintaining relational databases, and supporting data-driven decision-making.
-        </p>
-    </section>
+    <main>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Data Analysis & Engineering</h3>
-                <div class="tag-container">
-                    <span class="tag">Python (Pandas, NumPy)</span>
-                    <span class="tag">SQL Server</span>
-                    <span class="tag">Data Cleaning</span>
-                    <span class="tag">ETL Pipelines</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Visualization & Reporting</h3>
-                <div class="tag-container">
-                    <span class="tag">Power BI</span>
-                    <span class="tag">Advanced Excel</span>
-                    <span class="tag">Pivot Tables</span>
-                    <span class="tag">Interactive Dashboards</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Business & Finance</h3>
-                <div class="tag-container">
-                    <span class="tag">Financial Reporting</span>
-                    <span class="tag">Inventory Control</span>
-                    <span class="tag">Shift Operations</span>
-                    <span class="tag">Team Supervision</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- PROJECT 1: EGX STOCK MARKET PREDICTION -->
+        <article class="project-card">
+            <span class="tool-badge" style="background-color: #0284c7;">Machine Learning & Financial Analysis</span>
+            <h2 class="project-title">EGX Stock Market Forecasting & Macroeconomic Analysis</h2>
+            <p style="color: var(--text-muted);">Predictive financial machine learning model built with Python and XGBoost to forecast Egyptian Exchange (EGX) trends by incorporating macroeconomic metrics like USD/EGP exchange rates and pushing recommendations to Google Sheets.</p>
 
-    <section id="experience">
-        <h2>Work Experience</h2>
-
-        <div class="timeline-item">
-            <div class="timeline-header">
-                <div>
-                    <span class="job-title">Freelance Data Analyst</span> — <span class="company">Self-Employed</span>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Primary Algorithm</div>
+                    <div class="kpi-value">XGBoost & LSTM</div>
                 </div>
-                <div class="date">2026 – Present</div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Market Target</div>
+                    <div class="kpi-value">EGX (COMI.CA)</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Sync Integration</div>
+                    <div class="kpi-value">Google Sheets API</div>
+                </div>
             </div>
-            <ul>
-                <li>Analyze structured datasets with Python (Pandas/NumPy) to uncover business insights.</li>
-                <li>Build SQL Server queries and pipelines to extract, transform, and clean structured data.</li>
-                <li>Design interactive Power BI dashboards and KPI reports for dynamic data visualization.</li>
-                <li>Perform advanced Excel operations including custom logic, formulas, and reconciliation.</li>
+
+            <span class="section-header">Key Highlights</span>
+            <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-muted);">
+                <li><strong>Feature Engineering:</strong> Merged historical ticker prices with volatile foreign exchange trends to compute 5-day horizon directional signals.</li>
+                <li><strong>Automated Pipeline:</strong> Deployed scripts via Google Colab and gspread to automatically refresh daily stock signals.</li>
             </ul>
-        </div>
 
-        <div class="timeline-item">
-            <div class="timeline-header">
-                <div>
-                    <span class="job-title">Shift Leader</span> — <span class="company">Tech-Me</span>
+            <a href="https://github.com/Roshdy296" target="_blank" class="btn">View Code on GitHub</a>
+        </article>
+
+        <!-- PROJECT 2: YOUTUBE SHORTS AUTOMATION & WHISPER -->
+        <article class="project-card">
+            <span class="tool-badge" style="background-color: #7c3aed;">Python Media Automation & AI</span>
+            <h2 class="project-title">Automated Shorts Scraping & Whisper Transcription Engine</h2>
+            <p style="color: var(--text-muted);">End-to-end Python automation pipeline using yt-dlp, OpenAI Whisper, MoviePy, and PyDrive2 to scrape viral YouTube Shorts by hashtag, transcribe audio, detect engagement peaks, and auto-sync videos to Google Drive.</p>
+
+            <div class="kpi-grid">
+                <div class="kpi-card" style="border-left-color: var(--accent-purple);">
+                    <div class="kpi-label">Speech Recognition</div>
+                    <div class="kpi-value" style="color: var(--accent-purple);">Whisper Local AI</div>
                 </div>
-                <div class="date">2024 – Present</div>
-            </div>
-            <ul>
-                <li>Manage shift operations, task allocations, and operational workflow efficiency.</li>
-                <li>Monitor employee performance, conduct on-job training, and guide team members.</li>
-                <li>Draft shift analytics reports and present operational updates to management.</li>
-            </ul>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-header">
-                <div>
-                    <span class="job-title">Accountant</span> — <span class="company">Dream Pharma</span>
+                <div class="kpi-card" style="border-left-color: var(--accent-purple);">
+                    <div class="kpi-label">Cloud Sync</div>
+                    <div class="kpi-value" style="color: var(--accent-purple);">PyDrive2 API</div>
                 </div>
-                <div class="date">2017 – 2020</div>
             </div>
-            <ul>
-                <li>Processed financial transactions, payment approvals, and invoice records.</li>
-                <li>Monitored inventory levels and coordinated budget reporting with accounting teams.</li>
+
+            <span class="section-header">Technical Highlights</span>
+            <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-muted);">
+                <li><strong>Data Extraction:</strong> Filtered videos based on view thresholds and automatically generated vertical aspect ratios (9:16) for short-form video creation.</li>
+                <li><strong>Metadata Logging:</strong> Parsed video engagement metrics directly into structured Excel sheets using openpyxl.</li>
             </ul>
-        </div>
-    </section>
 
-    <section id="education">
-        <h2>Education & Languages</h2>
-        <div class="card">
-            <h3>Bachelor of Accounting</h3>
-            <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Alexandria University (Graduated 2023)</p>
-            <div class="tag-container">
-                <span class="tag">Arabic (Native)</span>
-                <span class="tag">English (Fluent)</span>
-                <span class="tag">French (Good)</span>
-                <span class="tag">Russian (Good)</span>
+            <a href="https://github.com/Roshdy296" target="_blank" class="btn">View Automation Repository</a>
+        </article>
+
+        <!-- PROJECT 3: AUTOMATED N8N PIPELINE & POWER BI -->
+        <article class="project-card">
+            <span class="tool-badge" style="background-color: #d97706;">ETL & Workflow Automation</span>
+            <h2 class="project-title">Automated n8n Data Ingestion & Power BI Dashboard Pipeline</h2>
+            <p style="color: var(--text-muted);">Automated ETL workflow utilizing n8n cloud to ingest, clean, and consolidate dynamic multi-table Excel datasets directly into a centralized Power BI dashboard environment.</p>
+
+            <div class="kpi-grid">
+                <div class="kpi-card" style="border-left-color: var(--accent-yellow);">
+                    <div class="kpi-label">Orchestration</div>
+                    <div class="kpi-value" style="color: var(--accent-yellow);">n8n Workflows</div>
+                </div>
+                <div class="kpi-card" style="border-left-color: var(--accent-yellow);">
+                    <div class="kpi-label">BI Visualization</div>
+                    <div class="kpi-value" style="color: var(--accent-yellow);">Power BI Desktop</div>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <footer>
-        <p>© 2026 Mohamed Ahmed Rashidi. Built with HTML/CSS for GitHub Pages.</p>
-    </footer>
-</div>
+            <span class="section-header">Workflow & BI Features</span>
+            <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-muted);">
+                <li><strong>Zero-Touch Refresh:</strong> Automatically triggers file consolidation upon receipt of raw data files, eliminating manual reporting tasks.</li>
+                <li><strong>Interactive Reporting:</strong> Implemented DAX dynamic measures to track operational key metrics and revenue trends.</li>
+            </ul>
+
+            <a href="https://github.com/Roshdy296" target="_blank" class="btn">View Workflow Details</a>
+        </article>
+
+        <!-- PROJECT 4: SQL QUERYING -->
+        <article class="project-card">
+            <span class="tool-badge" style="background-color: #059669;">SQL & Relational Databases</span>
+            <h2 class="project-title">SQL Cohort Analysis & Customer Retention Optimization</h2>
+            <p style="color: var(--text-muted);">Relational SQL data project implementing CTEs, window functions, and aggregations to calculate user retention rates and revenue degradation.</p>
+
+            <span class="section-header">Core SQL Cohort Query</span>
+            <pre>
+WITH MonthlyCohorts AS (
+    SELECT 
+        customer_id,
+        DATE_TRUNC('month', MIN(order_date)) OVER(PARTITION BY customer_id) AS cohort_month,
+        order_date,
+        total_amount
+    FROM sales_orders
+)
+SELECT 
+    cohort_month,
+    COUNT(DISTINCT customer_id) AS active_users,
+    SUM(total_amount) AS cohort_revenue
+FROM MonthlyCohorts
+GROUP BY cohort_month
+ORDER BY cohort_month ASC;
+            </pre>
+
+            <a href="https://github.com/Roshdy296" target="_blank" class="btn">View SQL Scripts</a>
+        </article>
+
+    </main>
 
 </body>
 </html>
