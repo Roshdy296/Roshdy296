@@ -153,6 +153,33 @@
             margin-top: 20px;
             display: block;
         }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .resume-item {
+            background-color: var(--bg-color);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .resume-item h4 {
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .resume-item span {
+            font-size: 0.85rem;
+            color: var(--accent-yellow);
+            display: block;
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body>
@@ -171,6 +198,59 @@
     </header>
 
     <main>
+
+        <!-- PROFESSIONAL BACKGROUND / CV SUMMARY -->
+        <article class="project-card">
+            <span class="tool-badge" style="background-color: #059669;">Professional Background</span>
+            <h2 class="project-title">Experience, Education & Languages</h2>
+            <p style="color: var(--text-muted);">A comprehensive overview of professional leadership, financial accounting background, data analytics training, and language proficiencies.</p>
+
+            <span class="section-header">Work Experience</span>
+            <div class="resume-grid">
+                <div class="resume-item">
+                    <h4>Shift Leader</h4>
+                    <span>Tech-Me (2024 – Present)</span>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Directing operational workflows, team coordination, and technical systems monitoring.</p>
+                </div>
+                <div class="resume-item" style="border-left-color: var(--accent-purple);">
+                    <h4>Accountant</h4>
+                    <span>Dream Pharma (2017 – 2020)</span>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Managed financial reporting, transaction tracking, and accounting reconciliation.</p>
+                </div>
+                <div class="resume-item" style="border-left-color: var(--accent-yellow);">
+                    <h4>Pharmacy Manager</h4>
+                    <span>Ghada El Zanaty Pharmacy (2014 – 2017)</span>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Oversaw inventory control, staff supervision, daily operations, and customer service standards.</p>
+                </div>
+            </div>
+
+            <span class="section-header">Education & Certifications</span>
+            <div class="resume-grid">
+                <div class="resume-item">
+                    <h4>Full-Stack Data Analysis Diploma</h4>
+                    <span>Arabian Academy (2026)</span>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Intensive training covering Python, SQL, ETL pipelines, and Power BI visualization.</p>
+                </div>
+                <div class="resume-item" style="border-left-color: var(--accent-purple);">
+                    <h4>Bachelor of Accounting</h4>
+                    <span>Alexandria University (2023)</span>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Core foundation in corporate finance, auditing, and accounting principles.</p>
+                </div>
+                <div class="resume-item" style="border-left-color: var(--accent-yellow);">
+                    <h4>McKinsey Forward Program</h4>
+                    <span>McKinsey & Company (2026)</span>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Professional learning program focused on problem-solving, leadership, and adaptability skills.</p>
+                </div>
+            </div>
+
+            <span class="section-header">Language Proficiencies</span>
+            <div class="tags" style="margin-top: 15px;">
+                <span class="tag" style="background-color: var(--bg-color); color: var(--accent-green);">Arabic (Native)</span>
+                <span class="tag" style="background-color: var(--bg-color); color: var(--accent-green);">English (Fluent)</span>
+                <span class="tag" style="background-color: var(--bg-color); color: var(--accent-blue);">French (Good)</span>
+                <span class="tag" style="background-color: var(--bg-color); color: var(--accent-blue);">Russian (Good)</span>
+            </div>
+        </article>
 
         <!-- PROJECT 1: EGX STOCK MARKET PREDICTION -->
         <article class="project-card">
@@ -225,7 +305,7 @@
                 <li><strong>Metadata Logging:</strong> Parsed video engagement metrics directly into structured Excel sheets using openpyxl.</li>
             </ul>
 
-        <a href="https://github.com/Roshdy296/Automated-YouTube-Shorts-Scraper-Whisper-AI" target="_blank" class="btn">View Automation Repository</a>
+            <a href="https://github.com/Roshdy296/Automated-YouTube-Shorts-Scraper-Whisper-AI" target="_blank" class="btn">View Automation Repository</a>
         </article>
 
         <!-- PROJECT 3: AUTOMATED N8N PIPELINE & POWER BI -->
